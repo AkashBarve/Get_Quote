@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>{{ requirement.product }}</h1>
+  <dl class="list">
+    <dt>Product Id</dt>
+    <dd>{{ requirement.product_id }}</dd>
+    <dt>Quantity</dt>
+    <dd>{{ requirement.quantity }}</dd>
+    <dt>Description</dt>
+    <dd>{{ requirement.description }}</dd>
+    <dt>Site</dt>
+    <dd>{{ requirement.site }}</dd>
+    <dt>Requirement Date</dt>
+    <dd>{{ requirement.requirement_date }}</dd>
+  </dl>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <a [routerLink]="['/requirement-edit', requirement._id]" class="btn btn-success">EDIT</a> &nbsp
+    <button class="btn btn-danger" type="button" (click)="deleteRequirement(requirement._id)">DELETE</button>
+  </div>
+</div>
