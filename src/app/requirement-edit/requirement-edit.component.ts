@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class RequirementEditComponent implements OnInit {
 
-  requirement = {};
+  requirement: any = {};
 
   constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
 
@@ -24,8 +24,8 @@ export class RequirementEditComponent implements OnInit {
     });
   }
 
-  updateRequirement(id, data) {
-    this.http.put('/requirement/'+id, data)
+  updateRequirement(id) {
+    this.http.put('/requirement/'+id, this.requirement)
       .subscribe(res => {
           let id = res['_id'];
           this.router.navigate(['/requirement-details', id]);

@@ -33,8 +33,8 @@ const appRoutes: Routes = [
 },
 {
   path: 'requirement-edit/:id',
-    component: RequirementEditComponent,
-    data: { title: 'Edit Requirement' }
+  component: RequirementEditComponent,
+  data: { title: 'Edit Requirement' }
 }
 
 ];
