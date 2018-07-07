@@ -1,0 +1,34 @@
+<div class="container">
+  <h1><a [routerLink]="['/']" class="btn btn-warning">REQUIREMENT LIST</a> &nbsp;
+    <a [routerLink]="['/requirement-create']" class="btn btn-default btn-lg">
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+    </a>
+  &nbsp;
+  <a [routerLink]="['/quotes']" class="btn btn-warning">QUOTE LIST</a> &nbsp;
+  <a [routerLink]="['/quote-create']" class="btn btn-default btn-lg">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+  </a><br>
+QUOTE LIST
+  </h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Product ID</th>
+        <th>Quote By</th>
+        <th>Quote Amount</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let quote of quotes">
+        <td>{{ quote.product }}</td>
+        <td>{{ quote.product_id }}</td>
+        <td>{{ quote.quote_by }}</td>
+        <td>{{ quote.quote }}</td>
+        <td><a [routerLink]="['/quote-details', quote._id]" class="btn btn-info">SHOW DETAIL</a>&nbsp;
+          <a [routerLink]="['/quote-edit', quote._id]" class="btn btn-success">EDIT</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

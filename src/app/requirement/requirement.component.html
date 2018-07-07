@@ -1,8 +1,14 @@
 <div class="container">
-  <h1>Requirement List
+  <h1><a [routerLink]="['/']" class="btn btn-warning">REQUIREMENT LIST</a> &nbsp;
     <a [routerLink]="['/requirement-create']" class="btn btn-default btn-lg">
       <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
     </a>
+  &nbsp;
+  <a [routerLink]="['/quotes']" class="btn btn-warning">QUOTE LIST</a> &nbsp;
+  <a [routerLink]="['/quote-create']" class="btn btn-default btn-lg">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+  </a>
+<br>REQUIREMENT LIST
   </h1>
   <table class="table">
     <thead>
@@ -19,9 +25,11 @@
         <td>{{ requirement.quantity }}</td>
         <td>{{ requirement.site }}</td>
         <td><a [routerLink]="['/requirement-details', requirement._id]" class="btn btn-info">SHOW DETAIL</a>&nbsp;
-          <a [routerLink]="['/requirement-edit', requirement._id]" class="btn btn-success">EDIT</a>
+          <a [routerLink]="['/requirement-edit', requirement._id]" class="btn btn-success">EDIT</a>&nbsp;
+          <a [routerLink]="['/quote-create']" class="btn btn-warning">ADD QUOTE</a>
       </tr>
     </tbody>
   </table>
 </div>
+
 

@@ -1,9 +1,10 @@
-<div class="row">
-  <div class="col-md-12">
-    <a [routerLink]="['/']" class="btn btn-info">HOME</a>
-  </div>
-</div>
+<br>
 <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+          <a [routerLink]="['/']" class="btn btn-info">HOME</a>
+        </div>
+      </div>
   <h1>{{ requirement.product }}</h1>
   <dl class="list">
     <dt>Product Id</dt>
@@ -17,11 +18,11 @@
     <dt>Requirement Date</dt>
     <dd>{{ requirement.requirement_date }}</dd>
   </dl>
+  <div class="row">
+      <div class="col-md-12">
+        <a [routerLink]="['/requirement-edit', requirement._id]" class="btn btn-success">EDIT</a> &nbsp;
+        <button class="btn btn-danger" type="button" (click)="deleteRequirement(requirement._id)">DELETE</button>
+      </div>
+    </div>
 </div>
 
-<div class="row">
-  <div class="col-md-12">
-    <a [routerLink]="['/requirement-edit', requirement._id]" class="btn btn-success">EDIT</a>&nbsp;
-    <button class="btn btn-danger" type="button" (click)="deleteRequirement(requirement._id)">DELETE</button>
-  </div>
-</div>

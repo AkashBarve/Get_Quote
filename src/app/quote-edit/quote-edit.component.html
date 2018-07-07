@@ -1,0 +1,50 @@
+<br><div class="container">
+    <div class="row">
+        <div class="col-md-12">
+          <a [routerLink]="['/quotes']" class="btn btn-info">HOME</a>
+        </div>
+      </div>
+    <h1>Edit Quote</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <form (ngSubmit)="updateQuote(quote._id)" #quoteForm="ngForm">
+            <div class="form-group">
+                <label for="name">Product</label>
+                <input type="text" class="form-control" [(ngModel)]="quote.product" name="product" required>
+              </div>
+              <div class="form-group">
+                <label for="name">Product ID</label>
+                <input type="number" class="form-control" [(ngModel)]="quote.product_id" name="product_id" min="10" max="10000" step="10" required>
+              </div>
+              <div class="form-group">
+                <label for="name">Quote By</label>
+                <input type="text" class="form-control" [(ngModel)]="quote.quote_by" name="quote_by" required>
+              </div>
+              <div class="form-group">
+                <label for="name">Quote Amount</label>
+                <input type="number" class="form-control" [(ngModel)]="quote.quote" name="quote" min="0" required>
+              </div>
+              <div class="form-group">
+                <label for="name">Currency</label>
+                <select type="text" class="form-control" [(ngModel)]="quote.currency" name="currency" required>
+                  <option value="INR">INR</option>
+                  <option value="USD">USD</option>
+                  <option value="EUR">EUR</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                <label for="name">Comment</label>
+                <input type="text" class="form-control" [(ngModel)]="quote.comment" name="comment">
+              </div>
+              <div class="form-group">
+                  <label for="name">Estimated Delivery Date</label>
+                  <input type="datetime-local" class="form-control" [(ngModel)]="quote.estimated_date" name="estimated_date" required>
+                </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-success" [disabled]="!quoteForm.form.valid">Update</button>&nbsp;
+            <button type="reset" class="btn btn-success" [disabled]="!quoteForm.form.valid">Reset</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

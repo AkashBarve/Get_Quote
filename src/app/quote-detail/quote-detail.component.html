@@ -1,0 +1,31 @@
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+          <a [routerLink]="['/quotes']" class="btn btn-info">HOME</a>
+        </div>
+      </div>
+  <h1>{{ quote.title }}</h1>
+  <dl class="list">
+    <dt>Product</dt>
+    <dd>{{ quote.product }}</dd>
+    <dt>Product ID</dt>
+    <dd>{{ quote.product_id }}</dd>
+    <dt>Quote By</dt>
+    <dd>{{ quote.quote_by }}</dd>
+    <dt>Quote Amount</dt>
+    <dd>{{ quote.quote }}</dd>
+    <dt>Currency</dt>
+    <dd>{{ quote.currency }}</dd>
+    <dt>Comment</dt>
+    <dd>{{ quote.comment }}</dd>
+    <dt>Estimated Delivery</dt>
+    <dd>{{ quote.estimated_date }}</dd>
+  </dl>
+  <div class="row">
+      <div class="col-md-12">
+        <a [routerLink]="['/quote-edit', quote._id]" class="btn btn-success">EDIT</a>&nbsp;
+        <button class="btn btn-danger" type="button" (click)="deleteQuote(quote._id)">DELETE</button>
+      </div>
+    </div>
+</div>

@@ -10,6 +10,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { RequirementDetailComponent } from './requirement-detail/requirement-detail.component';
 import { RequirementCreateComponent } from './requirement-create/requirement-create.component';
 import { RequirementEditComponent } from './requirement-edit/requirement-edit.component';
+import { QuoteComponent } from './quote/quote.component';
+import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
+import { QuoteCreateComponent } from './quote-create/quote-create.component';
+import { QuoteEditComponent } from './quote-edit/quote-edit.component';
 const appRoutes: Routes = [
   {
     path: 'requirements',
@@ -35,7 +39,28 @@ const appRoutes: Routes = [
   path: 'requirement-edit/:id',
   component: RequirementEditComponent,
   data: { title: 'Edit Requirement' }
+},
+{
+  path: 'quotes',
+  component: QuoteComponent,
+  data: { title: 'Quote List' }
+},
+{
+  path: 'quote-details/:id',
+  component: QuoteDetailComponent,
+  data: {title: 'Quote Details' }
+},
+{
+  path: 'quote-create',
+  component: QuoteCreateComponent,
+  data: {title: 'Create Quote' }
+},
+{
+  path: 'quote-edit/:id',
+  component: QuoteEditComponent,
+  data: {title: 'Edit Quote' }
 }
+
 
 ];
 @NgModule({
@@ -44,7 +69,11 @@ const appRoutes: Routes = [
     RequirementComponent,
     RequirementDetailComponent,
     RequirementCreateComponent,
-    RequirementEditComponent
+    RequirementEditComponent,
+    QuoteComponent,
+    QuoteDetailComponent,
+    QuoteCreateComponent,
+    QuoteEditComponent
   ],
   imports: [
     BrowserModule,
