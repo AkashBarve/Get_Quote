@@ -1,3 +1,42 @@
+REQUIRED:
+- Node.js (recommended version)
+- Angular CLI 1.5
+- Angular 5
+- MongoDB
+- Express.js
+- Mongoose.js
+(Confirm you can run mongo daemons)
+
+After cloning project: 
+
+1. Update Angular CLI
+
+sudo npm install -g @angular/cli
+
+2. Go to project directory
+
+3. Add express.js modules and dependencies
+
+npm install --save express body-parser morgan body-parser serve-favicon
+
+4. Install mongoose.js
+
+npm install --save mongoose bluebird
+
+5. Run mongod server
+
+mongod
+
+6. Open new Terminal tab
+
+npm start
+
+## You should see connection successful at the last line on the terminal
+
+7. Open browser and visit `http://localhost:3000/`
+
+************************************************************************************************
+
 # GetQuote
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
