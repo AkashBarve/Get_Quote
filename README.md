@@ -11,27 +11,27 @@ After cloning project:
 
 1. Update Angular CLI
 
-sudo npm install -g @angular/cli
+`sudo npm install -g @angular/cli`
 
 2. Go to project directory
 
 3. Add express.js modules and dependencies
 
-npm install --save express body-parser morgan body-parser serve-favicon
+`npm install --save express body-parser morgan body-parser serve-favicon`
 
 4. Install mongoose.js
 
-npm install --save mongoose bluebird
+`npm install --save mongoose bluebird`
 
 5. Run mongod server
 
-mongod
+`mongod`
 
 6. Open new Terminal tab
 
-npm start
+`npm start`
 
-## You should see connection successful at the last line on the terminal
+## You should see `connection successful` at the last line on the terminal
 
 7. Open browser and visit `http://localhost:3000/`
 
