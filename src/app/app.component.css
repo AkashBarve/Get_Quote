@@ -1,3 +1,12 @@
 body {
     background-image: url("http://blog.hostbaby.com/wp-content/uploads/2014/03/PaintSwatches_1400x900.jpg");
 }
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: lightcoral;
+    color: rgb(19, 18, 18);
+    text-align: center;
+}
