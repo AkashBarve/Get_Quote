@@ -9,7 +9,8 @@ var requirement = require('./routes/requirement');
 var app = express();
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://localhost/get-quote', { useMongoClient: true, promiseLibrary: require('bluebird') })
+var url = process.env.MONGOLAB_URI;
+mongoose.connect(url, { useMongoClient: true, promiseLibrary: require('bluebird') })
   .then(() =>  console.log('connection succesful'))
   .catch((err) => console.error(err));
 
